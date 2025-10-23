@@ -134,6 +134,7 @@ body {
     margin-bottom: 10px;
     position: relative;
     padding-bottom: 15px;
+    margin-top: 10px;
 }
 
 .section-title::after {
