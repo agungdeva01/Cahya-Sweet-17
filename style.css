@@ -323,7 +323,7 @@ body {
     position: relative;
     margin: auto;
     /* Meningkatkan min-height untuk memberikan ruang vertikal yang cukup agar bagian "Important Note" turun ke bawah */
-    min-height: 1020px; /* Nilai diperbarui dari 450px ke 600px */
+    min-height: 1200px; /* Nilai diperbarui dari 450px ke 600px */
 }
 
 .mySlides {
