@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweet Seventeen - Ayla</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;700&family=Raleway:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="cover-page">
+        <div class="cover-bg"></div>
+        <div class="cover-content">
+            <p class="cover-greeting">Kepada Yth. Bapak/Ibu/Saudara/i</p>
+            <p class="cover-greeting" id="guest-name">[Nama Tamu]</p>
+
+            <h1 class="cover-name">Cahya</h1>
+            <p class="cover-caption">Sweet Seventeen: A New Chapter Begins</p>
+            <p class="cover-date">22 November 2025</p>
+
+            <button class="cover-button" onclick="openInvitation()">Buka Undangan</button>
+        </div>
+    </div>
+    
+    <div id="custom-modal" class="modal">
+        <div class="modal-content">
+            <span class="close-btn" onclick="closeModal()">&times;</span>
+            <p id="modal-message"></p>
+        </div>
+    </div>
+
+    <div id="main-content">
+        
+        <section class="section">
+            <div class="hero-img reveal-element"></div>
+            <p class="quote reveal-element">"Seventeen. A beautiful age where dreams are painted with possibility and the journey into the world truly begins."</p>
+            
+            <p class="main-greeting reveal-element">Dengan hati penuh sukacita, kami mengundang</p>
+            <h2 class="full-name reveal-element">Gusti Ayu Agung Putri Cahya Asti Susila</h2>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title">The Celebration</h2>
+            
+            <div class="detail-item reveal-element">
+                <h3>Hari & Tanggal</h3>
+                <p>Sabtu, 22 November 2025</p>
+            </div>
+            
+            <div class="detail-item reveal-element">
+                <h3>Waktu</h3>
+                <p>Pukul 18:00 WIB - 22:00 WIB</p>
+                <p>(Open Gate: 17:30 WIB)</p>
+            </div>
+            
+            <div class="detail-item reveal-element">
+                <h3>Lokasi</h3>
+                <p>GIMORA Garden</p>
+                <p>Jl. Ahmad Yani, Abian Tuwung, Kec. Kediri, Kabupaten Tabanan</p>
+            </div>
+
+            <div id="countdown-timer" class="reveal-element">
+            </div>
+        </section>
+        
+        <section class="section">
+            <h2 class="section-title">Your Presence</h2>
+
+            <div class="map-container reveal-element">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3945.3694682406835!2d115.15033651106668!3d-8.56042569144789!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x2dd23b9ee031a167%3A0xbf688bfafde021b6!2sWei%20Fu%20Dimsum%20Bar%20Tabanan!5e0!3m2!1sid!2sid!4v1761106788477!5m2!1sid!2sid" 
+                    width="100%" 
+                    height="300" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy">
+                </iframe>
+            </div>
+
+            <a href="https://maps.app.goo.gl/XAuApAHRHrgM5Yq48" target="_blank" class="map-link-btn reveal-element">
+                <i class="fas fa-map-marker-alt"></i> Buka di Google Maps
+            </a>
+            
+            <form id="rsvp-form" class="reveal-element" 
+                action="https://docs.google.com/forms/d/e/1FAIpQLSdnA5KTzPsVJH5BmV3tVJQazxpq00Gok2YhhCrcD8KV57rNUw/formResponse" 
+                method="POST" 
+                target="_blank" 
+                onsubmit="handleRsvpSubmit(event)">
+                
+                <p style="font-size: 0.9em; margin-bottom: 20px;">
+                    *Mohon konfirmasi kehadiran sebelum **1 November 2025**
+                </p>
+                <div class="form-group">
+                    <label for="rsvp-name">Nama Lengkap</label>
+                    <input type="text" id="rsvp-name" name="entry.874037846" required> 
+                </div>
+                <div class="form-group">
+                    <label for="rsvp-status">Status Kehadiran</label>
+                    <select id="rsvp-status" name="entry.82288217" required>
+                        <option value="">-- Pilih Status --</option>
+                        <option value="Ya, Saya Hadir">Ya, Saya Hadir</option>
+                        <option value="Maaf, Tidak Bisa Hadir">Maaf, Tidak Bisa Hadir</option>
+                    </select>
+                </div>
+                <div class="form-group">
+                    <label for="rsvp-count">Jumlah Orang (Termasuk Anda)</label>
+                    <input type="number" id="rsvp-count" name="entry.1050073126" value="1" min="1" max="10" required> 
+                </div>
+                <button type="submit" class="form-submit-btn">Kirim RSVP</button>
+            </form>
+        </section>
+
+        <section class="section">
+            <h2 class="section-title">Memories</h2>
+            
+            <div class="slideshow-container reveal-element">
+                <div class="mySlides fade">
+                    <img src="img/fotoa.jpg" alt="Foto 1">
+                </div>
+                
+                <div class="mySlides fade">
+                    <img src="img/fotob.jpg" alt="Foto 2">
+                </div>
+                
+                <div class="mySlides fade">
+                    <img src="img/fotoc.jpg" alt="Foto 3">
+                </div>
+                
+                <div class="mySlides fade">
+                    <img src="img/fotod.jpg" alt="Foto 4">
+                </div>
+
+                <div class="slideshow-nav" style="text-align:center; margin-top: 15px;">
+                    <span class="dot" onclick="currentSlide(1)"></span>
+                    <span class="dot" onclick="currentSlide(2)"></span>
+                    <span class="dot" onclick="currentSlide(3)"></span>
+                    <span class="dot" onclick="currentSlide(4)"></span> 
+                </div>
+            </div>
+        </section>
+            
+        <section class="section">
+            <h2 class="section-title">Important Note</h2>
+            
+            <div class="protocol-box reveal-element">
+                <h4>Dress Code</h4>
+                <p><strong>Semi-Formal Elegant.</strong> Diutamakan warna **Pastel Lembut** (Blush, Mint, Lavender) atau **Netral Mewah** (Cream, Beige, Taupe). Harap hindari warna hitam dan putih.</p>
+            </div>
+            
+            <div class="protocol-box reveal-element" style="margin-top: 20px;">
+                <h4>Gifts Protocol</h4>
+                <p>Kehadiran Anda adalah hadiah terbaik bagi Ayla. Mohon untuk **tidak membawa bingkisan atau hadiah**.</p>
+            </div>
+        </section>
+
+        <section class="section closing-section">
+            <h2 class="section-title">Leave Your Blessings</h2>
+            
+            <form id="guestbook-form" class="reveal-element"
+                action="https://docs.google.com/forms/d/e/1FAIpQLSfAH5H9m0WQm3fhqSMZDA3cOGV0VEsISXhu0TzraiUkrNx9PQ/formResponse" 
+                method="POST" 
+                target="_blank" 
+                onsubmit="handleGuestbookSubmit(event)">
+                
+                <div class="form-group">
+                    <label for="gb-name">Nama Anda</label>
+                    <input type="text" id="gb-name" name="entry.1549133042" required>
+                </div>
+                <div class="form-group">
+                    <label for="gb-message">Ucapan Selamat</label>
+                    <textarea id="gb-message" rows="4" name="entry.163284965" required></textarea>
+                </div>
+                <button type="submit" class="form-submit-btn">Kirim Ucapan</button>
+            </form>
+
+            <div class="reveal-element" style="margin-top: 50px;">
+                <p class="closing-text">Terima kasih atas doa dan perhatian yang telah Anda berikan. Kami nantikan kehadiran Anda.</p>
+                <p class="signature-name">Cahya</p>
+                <p class="signature-parents">Keluarga Bapak & Ibu [Nama Orang Tua]</p>
+            </div>
+        </section>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
